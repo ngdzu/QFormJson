@@ -13,6 +13,9 @@ public:
 
 protected:
     void parseSchema(const QJsonObject& schema);
+//    void parseSchemaProperty(const QJsonObject& schema);
+    void parseSchemaProperty(const QJsonObject& schema);
+    void parseSchemaPropertyArray(const QJsonArray& array);
 
 private:
     QVBoxLayout * mGroupBox = new QVBoxLayout;

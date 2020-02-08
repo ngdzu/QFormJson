@@ -6,9 +6,9 @@ FormWidget::FormWidget(const QJsonDocument &doc, QWidget *parent)
     :QWidget(parent)
 {
 
-    QJsonObject root;
-    root.insert("type","object");
-    root.insert("properties", doc.object());
+    QJsonObject root(doc.object());
+//    root.insert("type","object");
+//    root.insert("properties", doc.object());
 
     QVBoxLayout * rootLayout = new QVBoxLayout;
     mRootField = new ObjectField(root);
